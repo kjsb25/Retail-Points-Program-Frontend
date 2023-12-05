@@ -15,7 +15,7 @@ function useTransactionData(fakeDataToggle) {
       Math.floor(Math.random() * 31),
     );
     const randomUser = "user" + Math.floor(Math.random() * 10);
-    const randomCost = Math.random() * 10;
+    const randomCost = Math.random() * 200;
     setRows([...rows, createData(randomDate, randomUser, randomCost)]);
   }
 
