@@ -19,7 +19,7 @@ const TransactionTable = ({ rows }) => {
             <TableRow>
               <TableCell>Date</TableCell>
               <TableCell align="right">User</TableCell>
-              <TableCell align="right">Amount</TableCell>
+              <TableCell align="right">Amount ($)</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -28,7 +28,9 @@ const TransactionTable = ({ rows }) => {
                 <TableRow key={row.name}>
                   <TableCell>{new Date(row.date).toDateString()}</TableCell>
                   <TableCell align="right">{row.user}</TableCell>
-                  <TableCell align="right">{row.amount}</TableCell>
+                  <TableCell align="right">
+                    {Number(row.amount).toFixed(2)}
+                  </TableCell>
                 </TableRow>
               ))}
           </TableBody>

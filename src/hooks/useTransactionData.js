@@ -8,6 +8,7 @@ function useTransactionData(fakeDataToggle) {
   }
 
   useEffect(() => {
+    //async api call would be here.
     if (fakeDataToggle) {
       const fakeRows = [
         createData(new Date("01-01-2023"), "user1", 25.4),
@@ -30,6 +31,7 @@ function useTransactionData(fakeDataToggle) {
         createData(new Date("03-02-2023"), "user2", 68.95),
         createData(new Date("03-03-2023"), "user3", 21.94),
         createData(new Date("03-03-2023"), "user4", 51.32),
+        createData(new Date("03-03-2023"), "user1", 101.32),
       ];
 
       setRows(fakeRows);
