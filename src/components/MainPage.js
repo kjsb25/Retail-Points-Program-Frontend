@@ -12,7 +12,9 @@ const MainPage = () => {
   return (
     <Grid container spacing={2} sx={{ mt: 10 }}>
       <Grid item xs={12}>
-        <Button variant="contained" onClick={createRandomRow}>Create Random Row</Button>
+        <Button variant="contained" onClick={createRandomRow}>
+          Create Random Row
+        </Button>
       </Grid>
       <Grid item xs={10}>
         <PointsPerMonthTable rows={rows} />
