@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Retail-Points-Program-Frontend/static/css/main.f855e6bc.css",
-    "main.js": "/Retail-Points-Program-Frontend/static/js/main.fa4b4334.js",
+    "main.js": "/Retail-Points-Program-Frontend/static/js/main.b5042642.js",
     "static/js/787.0136466b.chunk.js": "/Retail-Points-Program-Frontend/static/js/787.0136466b.chunk.js",
     "index.html": "/Retail-Points-Program-Frontend/index.html",
     "main.f855e6bc.css.map": "/Retail-Points-Program-Frontend/static/css/main.f855e6bc.css.map",
-    "main.fa4b4334.js.map": "/Retail-Points-Program-Frontend/static/js/main.fa4b4334.js.map",
+    "main.b5042642.js.map": "/Retail-Points-Program-Frontend/static/js/main.b5042642.js.map",
     "787.0136466b.chunk.js.map": "/Retail-Points-Program-Frontend/static/js/787.0136466b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.fa4b4334.js"
+    "static/js/main.b5042642.js"
   ]
 }
