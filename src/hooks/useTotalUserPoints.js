@@ -2,10 +2,10 @@ import { useMemo, useState } from "react";
 import { calcPointAmount } from "../lib/points";
 
 function useTotalUserPoints(transactions) {
-    const [isLoading,setIsLoading]=useState(true)
+  const [isLoading, setIsLoading] = useState(true);
 
   const userScores = useMemo(() => {
-    setIsLoading(true)
+    setIsLoading(true);
 
     if (transactions === null || transactions === undefined) {
       return {};
@@ -24,7 +24,7 @@ function useTotalUserPoints(transactions) {
       }
       return acc;
     }, []);
-    setIsLoading(false)
+    setIsLoading(false);
 
     return userScores;
   }, [transactions]);
@@ -35,6 +35,5 @@ function useTotalUserPoints(transactions) {
 function createData(user, points) {
   return { user, points };
 }
-
 
 export default useTotalUserPoints;

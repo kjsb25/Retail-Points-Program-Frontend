@@ -11,11 +11,11 @@ import {
 import useTotalUserPoints from "../hooks/useTotalUserPoints";
 
 const PointsSummaryTable = ({ rows }) => {
-  const [userScores,isLoading] = useTotalUserPoints(rows);
+  const [userScores, isLoading] = useTotalUserPoints(rows);
 
   return (
     <>
-      <Typography variant="h6">Points Summary</Typography>
+      <Typography variant="h6">Points Total</Typography>
       <TableContainer component={Paper}>
         <Table size="small">
           <TableHead>
@@ -25,13 +25,14 @@ const PointsSummaryTable = ({ rows }) => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {!isLoading && userScores &&
+            {!isLoading &&
+              userScores &&
               userScores.map((row) => (
                 <TableRow key={row.name}>
                   <TableCell>{row.user}</TableCell>
                   <TableCell align="right">{row.points}</TableCell>
                 </TableRow>
-              ))} 
+              ))}
           </TableBody>
         </Table>
       </TableContainer>

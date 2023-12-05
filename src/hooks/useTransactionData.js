@@ -7,8 +7,19 @@ function useTransactionData(fakeDataToggle) {
     return { date, user, amount };
   }
 
+  function createRandomRow() {
+    const year = 2023;
+    const randomDate = new Date(
+      year,
+      Math.floor(Math.random() * 12) - 1,
+      Math.floor(Math.random() * 31),
+    );
+    const randomUser = "user" + Math.floor(Math.random() * 10);
+    const randomCost = Math.random() * 10;
+    setRows([...rows, createData(randomDate, randomUser, randomCost)]);
+  }
+
   useEffect(() => {
-    //async api call would be here.
     if (fakeDataToggle) {
       const fakeRows = [
         createData(new Date("01-01-2023"), "user1", 25.4),
@@ -36,9 +47,10 @@ function useTransactionData(fakeDataToggle) {
 
       setRows(fakeRows);
     }
+    //async api call would be here in an else
   }, [fakeDataToggle]);
 
-  return rows;
+  return [rows, createRandomRow];
 }
 
 export default useTransactionData;
